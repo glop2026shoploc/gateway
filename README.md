@@ -25,6 +25,17 @@ Par défaut, la gateway redirige vers les services sur `localhost:8081` à `8085
 
 Exemple : http://localhost:8080/api/users/hello → http://localhost:8081/api/users/hello
 
+## Eureka
+
+Depuis la racine du projet, lancer les deux applications eureka-server et gateway
+
+```bash
+.\mvnw.cmd spring-boot:run
+```
+
+Interface Eureka : http://localhost:8761
+
+
 ## Dans Docker (glop-infra / serveur)
 
 Les adresses sont remplacées par des variables d'environnement :
@@ -38,5 +49,3 @@ Les adresses sont remplacées par des variables d'environnement :
 | `CATALOGUE_URL` | `http://catalogue-api:8080` |
 | `FRONT_URL` | `http://front:3000` |
 | `CORS_ALLOWED_ORIGINS` | origines autorisées pour `/api/**` (dev) |
-
-
